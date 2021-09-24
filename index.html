@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website</title>
     <link href="styles/style.css" rel="stylesheet">
+    
 </head>
 <body>
     <header class="header">
@@ -17,16 +18,17 @@
             </div>
             <div class="nav-menu">
                 <ul class="list">
-                    <li> <a href="">Home</a></li>
-                    <li> <a href="">About</a></li>
-                    <li> <a href="">Portfolio</a></li>
-                    <li> <a href="">Contact </a></li>
+                    <li> <a href="" class ='scroll' id='homelink'>Home </a></li>
+                    <li> <a href="" class ='scroll' id='aboutlink'>About</a></li>
+                    <li> <a href="" class ='scroll' id= 'Portfolio'>Portfolio</a></li>
+                    <li> <a href="" class ='scroll'　id= 'Contact'>Contact </a></li>
+                    <button class = "show-modal">Hello</button>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <section class="home container">
+        <section class="home container" id="home-section">
             <div>
                 <h1 >Welcome</h1>
                 <p> My name is Anmol Singh. I am majoring in Computer <br>Science at Fresno State Universtiy.</p>
@@ -36,7 +38,7 @@
                 <img src="">
             </div>
         </section>
-        <section class="about container">
+        <section class="about container" id="about-section">
             <div class="about-header">
                 <h1>About me</h1>
             </div>
@@ -45,7 +47,22 @@
                 <img src="">
             </div>
         </section>
+        <section class="Portfolio container" id="portfolio-section">
+            <div class="portfolio-header">
+                <h1>Here is</h1>
+            </div>
+            <div class="portfolio-image">
+                <h1>Image Here</h1>
+                <img src="">
+            </div>
+        </section>
     </main>
-   
+  
+    <div class="modal hidden">
+        <button class="close">X</button>
+        <h1>Hi</h1>
+        <p>I created this website for practicing my web development skills</p>
+    </div>
+    <script src="script/script.js"></script>
 </body>
 </html>
