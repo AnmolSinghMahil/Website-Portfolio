@@ -16,10 +16,16 @@
 
 /*if i define header as sticky then the sticky-container will be
 the parent/body, in which the header can move in */
+
+.body{
+    color: #f3f3f3;
+}
 .header{
-    margin:25px 0px;
+    padding:25px 0px;
     position:sticky; 
-    top:25px;
+    top:0;
+    background:rgb(247, 245, 241);
+    opacity: .7;
 }
 
 .logo a{
@@ -53,16 +59,30 @@ the parent/body, in which the header can move in */
     display:grid;
     height:100vh;
     grid-template-columns: 1fr 1fr;
-    justify-items: center; /*moves the content of the cell to the
+     /* justify-items: center; /*moves the content of the cell to the
                             middle of the cell horizontaly */
     align-items: center; /*verticaly move it to center of the cell*/
 
 }
-
+.left-column{
+    justify-self: end;
+}
+.right-column {
+    justify-self:start;
+}
 
 .home h1{
     font-size: 5rem;
 }
+
+
+.right-column img{
+    width:100%;
+    border:2px solid black;
+    border-radius: 200px;
+}
+
+
 
 .hidden{
     display:none;

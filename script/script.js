@@ -58,6 +58,11 @@ document.querySelector('.list').addEventListener('click', function (e) {
     }
 });
 
+const scrollDown = document.querySelector('.scroll-down');
+const nextSection = document.querySelector('#section--2');
 
+scrollDown.addEventListener('click',function(){
+    nextSection.scrollIntoView({behavior:"smooth"});
+})
 
   
