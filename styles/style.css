@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 *{
     box-sizing: border-box;
     margin:0;
@@ -6,10 +7,10 @@
 }
 
 :root{
-    --hue-color:0;
-    
-    --header-color:hsl(var(--hue-color),0,0);
-
+    --hue-color:240;  /* 360 red, 230 blue, 250 purple, 142 Green */ 
+    /* hsl(color 0-360,Saturation grey0-100 noGrey, Lightness dark0-white100) */
+    --header-color:hsl(var(--hue-color),50%,50%);
+    --body-color:hsl(var(--hue-color),70%,70%);
     --text-color:hsl(var(--hue-color),0,50);
     --text-lighter:hsl(var(--hue-color),0,66);
 }
@@ -17,20 +18,24 @@
 /*if i define header as sticky then the sticky-container will be
 the parent/body, in which the header can move in */
 
-.body{
-    color: #f3f3f3;
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:#fff;
 }
+
+/* ------------------------------Header---------------------------------- */
 .header{
     padding:25px 0px;
     position:sticky; 
     top:0;
-    background:rgb(247, 245, 241);
-    opacity: .7;
+    background-color: var(--header-color);
+    
 }
 
 .logo a{
     text-decoration: none;
     font-size: 1.5rem;  
+    color:white;
 }
 .nav-container{
     display:flex;
@@ -49,41 +54,126 @@ the parent/body, in which the header can move in */
     text-decoration: none;
     font-size:1.5rem;
     margin: 0 40px;
+    color:#fff;
 }
 .list li:last-child{
     margin-left:100px;
 }
 
+/* --------------------------------Header---------------------------------- */
 
-.container{
+
+
+/* -----------------------------Home Section--------------------------------- */
+.home-container{
     display:grid;
+
     height:100vh;
     grid-template-columns: 1fr 1fr;
      /* justify-items: center; /*moves the content of the cell to the
                             middle of the cell horizontaly */
-    align-items: center; /*verticaly move it to center of the cell*/
-
-}
-.left-column{
-    justify-self: end;
-}
-.right-column {
-    justify-self:start;
-}
-
-.home h1{
-    font-size: 5rem;
+     /* align-items: center;verticaly move it to center of the cell */
+   
+    column-gap: 4rem;
+    border-bottom: 2px solid grey;
+   
 }
 
 
-.right-column img{
-    width:100%;
+
+.left{
+    /* background-color: var(--body-color); */
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.right{
+    /* background-color:var(--header-color); */   
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 6rem;
+}
+.home-container h1{
+    font-size: 2rem;
+}
+
+
+.profile-img {
+width:70%;
     border:2px solid black;
     border-radius: 200px;
 }
 
+.scroll-down{
+    display:block;
+    cursor:pointer;
+    width:100px;
+    
+    border-radius: 10px;
+    
+}
+.scroll-down:hover {
+    background-color: var(--body-color);
+    border-bottom: 2px solid var(--header-color);
+}
+
+/* -----------------------------Home Section--------------------------------- */
+
+/*　-----------------------------About section------------------------------- */
+    
+
+.about__container{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr 1fr;
+    grid-template-areas: 
+    "title title"
+    "left-content right-content";
+    gap:40px;
+
+}
+#title{
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+    /* background-color: wheat; */
+    justify-content: center;
+}
+#left-content{
+    justify-self: end;
+    align-self: start;
+    grid-area:left-content;
+    /* background-color:var(--body-color); */
+}
+#right-content{
+    width:40%;
+    justify-self: start;
+    align-self: start;
+    grid-area:right-content;
+    /* background-color:var(--header-color); */
+}
+/*　-----------------------------About section------------------------------- */
 
 
+
+
+
+/*　-----------------------------Portfolio section------------------------------- */
+/*　-----------------------------Portfolio section------------------------------- */
+
+
+
+
+
+/* ---------------------------------Footer----------------------------------- */
+/* ---------------------------------Footer----------------------------------- */
+
+
+
+
+/*---------------------------- Pop up window -----------------------------------*/
 .hidden{
     display:none;
 }
@@ -128,6 +218,7 @@ the parent/body, in which the header can move in */
     color:black;
 }
 
+/*---------------------------- Pop up window -----------------------------------*/
 
 /*
 hello
