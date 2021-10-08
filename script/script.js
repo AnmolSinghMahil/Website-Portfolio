@@ -3,13 +3,16 @@
 const openModal = document.querySelector('.show-modal');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.close');
+const blur1 = document.querySelector('.blur');
 
 openModal.addEventListener('click',function(){
     modal.classList.remove('hidden');
+    blur1.classList.remove('hidden');
 })
 
 closeModal.addEventListener('click',function(){
     modal.classList.add('hidden');
+    blur1.classList.add('hidden');
 })
 
 
@@ -64,5 +67,3 @@ const nextSection = document.querySelector('#section--2');
 scrollDown.addEventListener('click',function(){
     nextSection.scrollIntoView({behavior:"smooth"});
 })
-
-  

@@ -129,9 +129,11 @@ width:70%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .5fr 1fr;
     grid-template-areas: 
-    "title title"
+    "title  title"
     "left-content right-content";
+
     gap:40px;
+    border-bottom: 2px solid grey;
 
 }
 #title{
@@ -154,6 +156,7 @@ width:70%;
     grid-area:right-content;
     /* background-color:var(--header-color); */
 }
+
 /*　-----------------------------About section------------------------------- */
 
 
@@ -161,6 +164,79 @@ width:70%;
 
 
 /*　-----------------------------Portfolio section------------------------------- */
+.portfolio-container{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
+    /* grid-template-areas: 
+    "portfolio portfolio"
+    "image image image"
+    "image imgae image"; */
+}
+#text1 {
+    grid-column: 3;
+    grid-row:1;
+    justify-self: center;
+    align-self: center;
+}
+#text2 {
+    grid-area: 1/4/3/5;
+    align-self: center;
+}
+#image1 {
+   grid-area:1/2/3/3;
+    width:60%;
+    justify-self: end;
+    align-self: center;
+
+}
+#image2 {
+    grid-area: 2/ 4/4/5;
+    width:60%;
+    justify-self: start;
+    align-self: center;
+}
+#image3 {
+    grid-column: 2;
+    grid-row:4;
+    width:60%;
+    justify-self: end;
+    align-self: start;
+}
+#image4 {
+    grid-column: 4;
+    grid-row:5;
+    width:60%;
+    justify-self: start;
+    align-self: start;
+}
+
+#text3 {
+    grid-area:2/2/4/3;
+    justify-self: end;
+    align-self: center;
+}
+#text4 {
+    grid-column: 4;
+    grid-row:4;
+}
+#text5 {
+    grid-column: 2;
+    grid-row:5;
+    justify-self: end;
+    align-self: start;
+}
+
+.line {
+    grid-area:2/3/3/4;
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+}
+
+
+
+
 /*　-----------------------------Portfolio section------------------------------- */
 
 
@@ -208,21 +284,57 @@ width:70%;
 
 
 .modal {
-    position:absolute;
-    top:0;
-    left:0;
-    width:50%;
-    height:100vh;
-    background-color: violet;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+  /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    width:25%;
+    height:25%;
+    background-color:rgb(76, 78, 189);
     border-radius: 5px;
     text-align: center;
+    z-index:10;
    
 }
-.close {
-    right:0;
-    top: 0;
-    color:black;
+.blur {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:5;
+    height:100%;
+    width: 100%;
+    backdrop-filter:blur(5px);
 }
+.close {
+    position:inherit;
+    right:0;
+    background-color: transparent;
+    width:5%;
+    
+}
+.contacts{
+    list-style: none;
+}
+.contacts li a {
+    color:white;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+.contacts li a:hover{
+    color:black;
+    border-bottom: 1px solid black;
+}
+.contacts1 li{
+    display:inline-block;
+}
+.contacts1 li a {
+    color:white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding-left:5px;
+}
+
 
 /*---------------------------- Pop up window -----------------------------------*/
 

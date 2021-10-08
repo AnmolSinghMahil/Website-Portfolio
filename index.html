@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Website</title>
     <link href="styles/style.css" rel="stylesheet">
     
@@ -45,37 +46,58 @@
         
         <section class="about-container" id="section--2">
            <div class="about__container">
-               <div id="title">
-                   <h1>About my self</h1>
-               </div>
-               <div id="left-content">
-                   <h4> I am pursuing Computer Science <br>
-                    Degree at Fresno State </h4>
-               </div>
+                <h1 id="title">About my self</h1>
+                <h4 id="left-content"> I am pursuing Computer Science <br>
+                 Degree at Fresno State </h4>
                <img src="images/fresnostate.jpg" alt="" id="right-content">
            </div>
         </section>
 
         <section class="portfolio-container" id="section--3">
-            <div class = 'column'>
-                <h1>Portfolio</h1>
-            </div>
-            <div class = 'column'>
-                <h1>Image Here</h1>
-                <img src="">
-            </div>
+
+            <h1 id='text1'>Portfolio</h1>
+            
+            <p id='text2'>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna alique.Ut enim ad minim veniam
+            </p> 
+            <p id='text3'>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna alique.Ut enim ad minim veniam.
+            </p>
+            <p id='text4'>Some Text</p>
+            <p id='text5'>Some Text  </p>
+            <div class="line"></div>
+            
+            <img src="images/fresnostate.jpg" alt="" id="image1">  
+            <img src="images/fresnostate.jpg" alt="" id="image2">
+            <img src="images/fresnostate.jpg" alt="" id="image3">
+            <img src="images/fresnostate.jpg" alt="" id="image4">
+             
         </section>
     </main>
 
         <footer class="footer">
             &copy;Copyright
+            <ul class="contacts1">
+                <li> <a href="https://twitter.com/AnmolSinghMahil" target="_blank">
+                    <i class="uil uil-twitter"></i></a></li>
+                <li> <a href="https://github.com/AnmolSinghMahil" target="_blank">
+                    <i class="uil uil-github"></i></a></li>
+                <li> <a href="">
+                    <i class="uil uil-linkedin"></i></a></li>
+            </ul>
         </footer>
   
     <div class="modal hidden">
         <button class="close">X</button>
-        <h1>Hi</h1>
-        <p>I created this website for practicing my web development skills</p>
+        <ul class="contacts">
+            <li> <a href="https://twitter.com/AnmolSinghMahil" target="_blank">Twitter</a></li>
+            <li> <a href="https://github.com/AnmolSinghMahil" target="_blank">Github</a></li>
+            <li> <a href="">LinkedIn</a></li>
+        </ul>
     </div>
+    <div class="blur hidden"></div>
     <script src="script/script.js"></script>
 </body>
 </html>
