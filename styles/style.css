@@ -127,10 +127,11 @@ width:70%;
     display:grid;
     height:100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .5fr 1fr;
+    grid-template-rows: .5fr 1fr ;
     grid-template-areas: 
     "title  title"
     "left-content right-content";
+    
 
     gap:40px;
     border-bottom: 2px solid grey;
@@ -150,12 +151,28 @@ width:70%;
     /* background-color:var(--body-color); */
 }
 #right-content{
-    width:40%;
+    width:35%;
+    height: 80%;
     justify-self: start;
     align-self: start;
     grid-area:right-content;
     /* background-color:var(--header-color); */
 }
+/* .images{
+    grid-area:images;
+    width:20%;
+    justify-self: center;
+    justify-content: center;
+}
+.row{
+    display:flex;
+}
+.images{
+    justify-self: center;
+    flex:50%;
+    grid-area:images;
+
+} */
 
 /*　-----------------------------About section------------------------------- */
 
@@ -336,41 +353,3 @@ width:70%;
 }
 
 
-/*---------------------------- Pop up window -----------------------------------*/
-
-/*
-hello
-
-.nav-container{
-    display:flex;
-    justify-content: space-between;
-}
-
-
-
-.list li{
-    list-style: none;
-    display:inline-block;
-    margin: 0 60px;
-    
-}
-.list li a{
-    text-decoration: none;
-    font-size:1.5rem;
-}
-.list li a:hover{
-    color:var(--text-lighter);
-}
-
-
-
-/*
-.nav-contact a{
-    text-decoration: none;
-    font-size:1.5rem;
-    margin-left: 100px;
-}
-.nav-contact a:hover{
-    color:var(--text-lighter);
-}
-*/
