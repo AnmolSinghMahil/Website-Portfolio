@@ -66,9 +66,12 @@ body{
 
 
 /* -----------------------------Home Section--------------------------------- */
+
+
+
 .home-container{
     display:grid;
-
+    
     height:100vh;
     grid-template-columns: 1fr 1fr;
      /* justify-items: center; /*moves the content of the cell to the
@@ -76,24 +79,35 @@ body{
      /* align-items: center;verticaly move it to center of the cell */
    
     column-gap: 4rem;
+    
+    
     border-bottom: 2px solid grey;
-   
+       
+    } 
+
+
+@media screen and (max-width:767px) {
+    .home-container{
+        display:grid;
+        grid-template-columns: 1fr;
+        border-bottom: 2px solid grey;
+    } 
+    
 }
-
-
-
+ 
 .left{
     /* background-color: var(--body-color); */
-    justify-self: center;
+    justify-self: end;
     align-self: center;
     
 }
 
 .right{
     /* background-color:var(--header-color); */   
-    justify-self: center;
+    justify-self: start;
     align-self: center;
     margin-bottom: 6rem;
+    border-radius: 20px;
 }
 .home-container h1{
     font-size: 2rem;
@@ -137,6 +151,20 @@ width:70%;
     border-bottom: 2px solid grey;
 
 }
+
+@media screen and (max-width:767px) {
+    .about__container{
+        display:block;
+        padding-left:5px;
+     
+    }
+    
+    #title{
+        padding-top: 5rem;
+    }
+
+    
+}
 #title{
     justify-self: center;
     align-self: center;
@@ -151,8 +179,8 @@ width:70%;
     /* background-color:var(--body-color); */
 }
 #right-content{
-    width:35%;
-    height: 80%;
+    max-width:40%;
+    height: auto;
     justify-self: start;
     align-self: start;
     grid-area:right-content;
@@ -261,12 +289,24 @@ width:70%;
 
 
 /* ---------------------------------Footer----------------------------------- */
-.footer{
-    background-color: var(--footer-color);
-    text-align: center;
-    padding: 30px 0px;
-    color:white;
+
+
+
+.footer {
+    background-color: black;
 }
+
+@media screen and (min-width:767px) {
+    .footer{
+        background-color: var(--footer-color);
+        text-align: center;
+        padding: 30px 0px;
+        color:white;
+    }
+    
+}
+
+
 /* ---------------------------------Footer----------------------------------- */
 
 
