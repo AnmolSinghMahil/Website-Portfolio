@@ -67,3 +67,25 @@ const nextSection = document.querySelector('#section--2');
 scrollDown.addEventListener('click',function(){
     nextSection.scrollIntoView({behavior:"smooth"});
 })
+
+
+//----------------------Nav-Responsive--------------------//
+
+const closebtn = document.querySelector("#nav-close");
+const togglebtn = document.querySelector("#nav-toggle");
+const navlinks= document.querySelector(".nav-links")
+
+closebtn.addEventListener("click", ()=>{
+
+    closebtn.classList.remove('hidden');
+    closebtn.classList.add("show");
+    console.log("closebtn was clicked")
+    
+})
+
+if(togglebtn) {
+    togglebtn.addEventListener("click",()=>{
+        navlinks.classList.add("show-menu");
+        console.log("toggle is pressed");
+    })
+}
