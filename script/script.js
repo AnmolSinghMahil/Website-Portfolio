@@ -1,17 +1,17 @@
-const openModal = document.querySelector(".show-modal");
-const modal = document.querySelector(".modal");
-const closeModal = document.querySelector(".close");
-const blur1 = document.querySelector(".blur");
+// const openModal = document.querySelector(".show-modal");
+// const modal = document.querySelector(".modal");
+// const closeModal = document.querySelector(".close");
+// const blur1 = document.querySelector(".blur");
 
-openModal.addEventListener("click", function () {
-  modal.classList.remove("hidden");
-  blur1.classList.remove("hidden");
-});
+// openModal.addEventListener("click", function () {
+//   modal.classList.remove("hidden");
+//   blur1.classList.remove("hidden");
+// });
 
-closeModal.addEventListener("click", function () {
-  modal.classList.add("hidden");
-  blur1.classList.add("hidden");
-});
+// closeModal.addEventListener("click", function () {
+//   modal.classList.add("hidden");
+//   blur1.classList.add("hidden");
+// });
 
 // const homeScroll = document.querySelector('#homelink');
 // const homeSection = document.querySelector('#home-section');
