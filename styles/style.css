@@ -152,9 +152,9 @@ body {
   justify-content: center;
 }
 #left-content {
-  justify-self: end;
-  align-self: start;
+  margin-left: 600px;
   grid-area: left-content;
+  overflow: inherit;
   /* background-color:var(--body-color); */
 }
 #right-content {
@@ -332,7 +332,7 @@ body {
 
   #left-content {
     margin-top: 1rem;
-    margin-left: 60px;
+    margin: 0 20px;
   }
 
   #nav-close,
