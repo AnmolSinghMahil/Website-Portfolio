@@ -112,7 +112,7 @@ body {
 .about__container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
   grid-template-rows: 0.5fr 1fr;
   grid-template-areas:
     "title  title"
@@ -126,21 +126,19 @@ body {
   justify-self: center;
   align-self: center;
   grid-area: title;
-  /* background-color: wheat; */
+
   justify-content: center;
 }
 #left-content {
   grid-area: left-content;
-
-  /* background-color:var(--body-color); */
+  margin: 50px;
 }
 #right-content {
-  max-width: 40%;
+  max-width: 45%;
   height: auto;
   justify-self: start;
   align-self: start;
   grid-area: right-content;
-  /* background-color:var(--header-color); */
 }
 /* .images{
     grid-area:images;
@@ -161,17 +159,39 @@ body {
 /*　-----------------------------About section------------------------------- */
 
 /*　-----------------------------Portfolio section------------------------------- */
+
 .portfolio-container {
   display: grid;
   height: 100vh;
-  /* grid-template-areas: 
-    "portfolio portfolio"
-    "image image image"
-    "image imgae image"; */
-}
-#text1 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
+  /* grid-template-rows: repeat(auto-fit, minmax(50px, .2fr)) */
+  /* grid-template-areas:
+    "portfolio portfolio portfolio"
+    "react-project another-project another2-project";
+  margin: 0px 100px 50px; */
   justify-self: center;
-  align-self: center;
+  /* margin: 0px 200px; */
+}
+#title2 {
+  text-align: center;
+  padding: 100px 0px;
+}
+.react-project {
+  /* grid-area: react-project; */
+  justify-self: center;
+}
+.react-card {
+  text-decoration: none;
+}
+
+.another-project {
+  /* grid-area: another-project; */
+  justify-self: center;
+}
+.another2-project {
+  /* grid-area: another2-project; */
+  justify-self: center;
 }
 
 /*　-----------------------------Portfolio section------------------------------- */
@@ -355,8 +375,20 @@ body {
   }
 }
 
-/* @media screen and (min-width: 1300px) {
+@media screen and (max-width: 500px) {
   #left-content {
-    margin-left: 400px;
+    padding: 0px;
   }
-} */
+  #right-content {
+    min-width: 40%;
+    max-height: 40%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #left-content {
+    margin-left: 0px;
+  }
+  #right-content {
+    width: 50%;
+  }
+}
