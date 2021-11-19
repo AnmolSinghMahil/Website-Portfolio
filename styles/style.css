@@ -191,8 +191,9 @@ body {
   background-color: rgb(39, 38, 110);
 
   color: white;
-  width: 500px;
+  width: 475px;
   max-height: 600px;
+  min-height: 300px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 5px 5px 5px grey;
@@ -408,6 +409,12 @@ body {
     margin: 0 20px;
     font-size: 0.8rem;
   }
+  .portfolio-container {
+    height: auto;
+  }
+  .react-card {
+    width: 450px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -418,6 +425,9 @@ body {
   #right-content {
     min-width: 30%;
     max-height: 40%;
+  }
+  .react-card {
+    width: 400px;
   }
 }
 @media screen and (max-width: 1300px) {
