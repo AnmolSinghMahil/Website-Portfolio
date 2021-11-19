@@ -40,6 +40,7 @@ body {
   position: sticky;
   top: 0;
   background-color: var(--header-color);
+  z-index: 1;
 }
 .list a {
   text-decoration: none;
@@ -126,12 +127,13 @@ body {
   justify-self: center;
   align-self: center;
   grid-area: title;
-
+  font-size: 2rem;
   justify-content: center;
 }
 #left-content {
   grid-area: left-content;
   margin: 50px;
+  font-size: clamp(0.5rem, 1.4rem, 6rem);
 }
 #right-content {
   max-width: 45%;
@@ -163,26 +165,58 @@ body {
 .portfolio-container {
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   /* grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
   /* grid-template-rows: repeat(auto-fit, minmax(50px, .2fr)) */
   /* grid-template-areas:
     "portfolio portfolio portfolio"
     "react-project another-project another2-project";
   margin: 0px 100px 50px; */
-  justify-self: center;
+
   /* margin: 0px 200px; */
+  row-gap: 10px;
+  column-gap: 10px;
 }
 #title2 {
   text-align: center;
   padding: 100px 0px;
+  font-size: 2rem;
 }
-.react-project {
-  /* grid-area: react-project; */
-  justify-self: center;
-}
+
 .react-card {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  background-color: rgb(39, 38, 110);
+
+  color: white;
+  width: 500px;
+  max-height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px grey;
+}
+.react-card:hover {
+  /* transform: scaleX(1.1); */
+  transform: scale(1.02, 1.02);
+  z-index: 0;
+}
+.card-content {
+  padding: 10px;
+}
+.react-image {
+  flex-basis: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.react-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.react-color {
+  background-color: rgb(37, 13, 32);
 }
 
 .another-project {
@@ -355,7 +389,7 @@ body {
   }
   .about__container {
     display: block;
-    padding-left: 5px;
+    padding: 0 70px;
     padding-top: 5rem;
   }
   #title {
@@ -366,29 +400,32 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
-    width: 30%;
+    width: 28%;
   }
 
   #left-content {
     margin-top: 1rem;
     margin: 0 20px;
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 500px) {
   #left-content {
     padding: 0px;
+    font-size: 0.6rem;
   }
   #right-content {
-    min-width: 40%;
+    min-width: 30%;
     max-height: 40%;
   }
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1300px) {
   #left-content {
     margin-left: 0px;
   }
   #right-content {
-    width: 50%;
+    font-size: 1rem;
+    width: 35%;
   }
 }
