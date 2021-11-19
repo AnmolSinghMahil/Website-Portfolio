@@ -136,7 +136,7 @@ body {
   font-size: clamp(0.5rem, 1.4rem, 6rem);
 }
 #right-content {
-  max-width: 45%;
+  width: 45%;
   height: auto;
   justify-self: start;
   align-self: start;
@@ -392,6 +392,7 @@ body {
     display: block;
     padding: 0 70px;
     padding-top: 5rem;
+    height: auto;
   }
   #title {
     text-align: center;
@@ -401,41 +402,53 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
-    width: 28%;
+    width: 35%;
   }
 
   #left-content {
     margin-top: 1rem;
     margin: 0 20px;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
-  .portfolio-container {
-    height: auto;
-  }
+
   .react-card {
     width: 450px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  #left-content {
+  /* #left-content {
     padding: 0px;
     font-size: 0.6rem;
-  }
+  } */
   #right-content {
     min-width: 30%;
     max-height: 40%;
   }
+
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
   .react-card {
-    width: 400px;
+    width: 350px;
+    /* padding-bottom: 10px; */
+    margin: 10px;
   }
 }
+
 @media screen and (max-width: 1300px) {
   #left-content {
     margin-left: 0px;
   }
   #right-content {
     font-size: 1rem;
-    width: 35%;
+    width: 50%;
+  }
+  .about__container {
+    height: auto;
+  }
+  .portfolio-container {
+    height: auto;
   }
 }
