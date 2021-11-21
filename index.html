@@ -73,30 +73,16 @@
           </h4>
 
           <img src="images/yosemite.jpg" alt="yosemite" id="right-content" />
-
-          <!-- <div class="row">
-            <div class="images">
-              <img
-                src="images/fresnostate.jpg"
-                alt="fresnostate"
-                style="width: 70%"
-              />
-            </div>
-            <div class="images">
-              <img
-                src="images/basketball.jpg"
-                alt="basketball"
-                style="width: 70%"
-              />
-            </div>
-          </div> -->
         </div>
       </section>
 
       <section class="portfolio" id="section--3">
         <h1 id="title2">Portfolio</h1>
         <div class="portfolio-container">
-          <a href="#" class="react-card react-color">
+          <a
+            href="https://github.com/AnmolSinghMahil/uploadPictures"
+            class="react-card react-color"
+          >
             <img
               style="background-image: url('images/react.jpg')"
               class="react-image"
@@ -104,9 +90,24 @@
             />
             <div class="card-content">
               <div class="react-title">uploadPictures</div>
-              <div class="description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Perspiciatis, dignissimos!Lorem
+              <div class="react-description">
+                <p>
+                  In this project, user can signup with email and password to
+                  upload pictures like Instagram. If user does not want the
+                  picture on their page anymore, they can delete it as well.
+                </p>
+                <p>
+                  I used React as my frontend and Firebase as my backend. One of
+                  problems I was having with this project was not knowing enough
+                  about React. But, I learned more as the project went on. For
+                  example, I was trying to lift my Auth user state up but I
+                  found out I cant pass the state into hooks component even if I
+                  declared the state in root componenet. So, then I learned
+                  about Login context, which solved the problem of passing my
+                  state into the hooks component. Also, I have better
+                  understanding of Firebase's Authenticantion, Storage, and
+                  Firestore.
+                </p>
               </div>
             </div>
           </a>
@@ -142,8 +143,6 @@
               </div>
             </div>
           </a>
-          <!-- <div class="another-project">Second Project</div>
-          <div class="another2-project">Third Project</div> -->
         </div>
       </section>
     </main>

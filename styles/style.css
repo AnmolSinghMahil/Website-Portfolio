@@ -35,6 +35,7 @@ body {
   margin: 0 20px;
   list-style: none;
 }
+
 .header {
   padding: 25px 0px;
   position: sticky;
@@ -47,6 +48,9 @@ body {
   font-size: 1.5rem;
   margin: 0 40px;
   color: #fff;
+}
+.list a:hover {
+  color: rgb(0, 0, 0);
 }
 .list li:last-child {
   margin-left: 100px;
@@ -132,8 +136,9 @@ body {
 }
 #left-content {
   grid-area: left-content;
-  margin: 50px;
+
   font-size: clamp(0.5rem, 1.4rem, 6rem);
+  padding-left: 20%;
 }
 #right-content {
   width: 45%;
@@ -192,7 +197,7 @@ body {
 
   color: white;
   width: 475px;
-  max-height: 600px;
+  max-height: 670px;
   min-height: 300px;
   border-radius: 10px;
   overflow: hidden;
@@ -216,9 +221,12 @@ body {
   font-size: 1.5rem;
   text-align: center;
 }
-.react-color {
-  background-color: rgb(37, 13, 32);
+.react-description {
+  text-indent: 40px;
 }
+/* .react-color {
+  background-color: rgb(146, 13, 235);
+} */
 
 .another-project {
   /* grid-area: another-project; */
@@ -390,7 +398,6 @@ body {
   }
   .about__container {
     display: block;
-    padding: 0 70px;
     padding-top: 5rem;
     height: auto;
   }
@@ -402,12 +409,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
-    width: 35%;
+    width: 50%;
   }
 
   #left-content {
-    margin-top: 1rem;
-    margin: 0 20px;
+    padding: 5px;
     font-size: 1rem;
   }
 
@@ -443,7 +449,7 @@ body {
   }
   #right-content {
     font-size: 1rem;
-    width: 50%;
+    width: 70%;
   }
   .about__container {
     height: auto;
